@@ -7,13 +7,18 @@ var ctx = document.getElementById("myBarChart");
 var myLineChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "rgba(2,117,216,1)",
+      label: "empleo Indep $",
+      backgroundColor: "#581845",
       borderColor: "rgba(2,117,216,1)",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
-    }],
+      data: [93796.70, 75091.14, 72881.28, 75693.53, 83557.03, 69149.75, 79765.67, 86547.45, 92918.88, 88323.19, 80590.20, 100277.57],
+    },
+    {
+      label: "empleo Dep $",
+    backgroundColor: "#1358E1  ",
+    borderColor: "rgba(2,117,216,1)",
+    data: [208927.54, 206629.10, 197214.61, 211593.29, 220988.54, 177190.81, 172138.33, 171464.16, 190423.25, 174896.36, 194379.83, 184872.35],}],
   },
   options: {
     scales: {
@@ -25,14 +30,14 @@ var myLineChart = new Chart(ctx, {
           display: false
         },
         ticks: {
-          maxTicksLimit: 6
+          maxTicksLimit: 12
         }
       }],
       yAxes: [{
         ticks: {
           min: 0,
-          max: 15000,
-          maxTicksLimit: 5
+          max: 300000,
+          maxTicksLimit:9
         },
         gridLines: {
           display: true
@@ -40,7 +45,7 @@ var myLineChart = new Chart(ctx, {
       }],
     },
     legend: {
-      display: false
+      display: true
     }
   }
 });

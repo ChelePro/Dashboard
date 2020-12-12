@@ -30,7 +30,7 @@
                                     </div>
                                     <div class="card-body">
                                         
-                                        <form action="usuario.php" method="POST">
+                                        <form action="usuario.php" method="GET">
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Usuario</label>
                                                 <input class="form-control py-4" id="inputEmailAddress" type="email" name="user" placeholder="ingrese usuario" require/>
@@ -40,12 +40,14 @@
                                                 <input class="form-control py-4" id="inputPassword" type="password" name="pass" placeholder="ingrese contraseña" require/>
                                             </div>
                                             <br><br>
-                                            <?php
-                                                if(isset($_GET["fallo"]) && $_GET["fallo"] == 'true')
-                                                {
-                                                    echo "<div style='color:red'>Usuario o contraseña invalido </div>";
-                                                }
-                                            ?>
+                                            <div class="form-group">
+                                                <?php
+                                                    if(isset($_GET["fallo"]) && $_GET["fallo"] == 'true')
+                                                    {
+                                                        echo "<div style='color:red'>Usuario o contraseña invalido </div>";
+                                                    }
+                                                ?>
+                                            </div>    
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="small" ></a>
                                                 <a class="btn btn-primary" href="index.html">Ingresar</a>

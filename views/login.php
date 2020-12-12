@@ -33,13 +33,19 @@
                                         <form action="usuario.php" method="POST">
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Usuario</label>
-                                                <input class="form-control py-4" id="inputEmailAddress" type="email" name="user" placeholder="ingrese usuario" />
+                                                <input class="form-control py-4" id="inputEmailAddress" type="email" name="user" placeholder="ingrese usuario" require/>
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputPassword">Contraseña</label>
-                                                <input class="form-control py-4" id="inputPassword" type="password" name="pass" placeholder="ingrese contraseña" />
+                                                <input class="form-control py-4" id="inputPassword" type="password" name="pass" placeholder="ingrese contraseña" require/>
                                             </div>
-                                            <!--<div style='color:red'> Usuario o contraseña invalido </div>-->
+                                            <br><br>
+                                            <?php
+                                                if(isset($_GET["fallo"]) && $_GET["fallo"] == 'true')
+                                                {
+                                                    echo "<div style='color:red'>Usuario o contraseña invalido </div>";
+                                                }
+                                            ?>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="small" ></a>
                                                 <a class="btn btn-primary" href="index.html">Ingresar</a>

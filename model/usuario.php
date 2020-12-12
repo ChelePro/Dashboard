@@ -10,7 +10,7 @@
 
       echo "Bienvenido ".$user;
 
-   } else {
+   } if (($user <> "Administrador") AND ($password <> "12345")) {
 
       echo "¡Usuario o contraseña incorrectos!";
 

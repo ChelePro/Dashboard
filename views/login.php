@@ -41,7 +41,7 @@
                                             </div>    
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="small" ></a>
-                                                <a class="btn btn-primary" href="index.html">Ingresar</a>
+                                                <a class="btn btn-primary">Ingresar</a>
                                             </div>
                                         </form>
                                     </div>

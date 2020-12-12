@@ -38,15 +38,6 @@
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputPassword">Contraseña</label>
                                                 <input class="form-control py-4" id="inputPassword" type="password" name="pass" placeholder="ingrese contraseña" require/>
-                                            </div>
-                                            <br><br>
-                                            <div class="form-group">
-                                                <?php
-                                                    if(isset($_GET["fallo"]) && $_GET["fallo"] == 'true')
-                                                    {
-                                                        echo "<div style='color:red'>Usuario o contraseña invalido </div>";
-                                                    }
-                                                ?>
                                             </div>    
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="small" ></a>

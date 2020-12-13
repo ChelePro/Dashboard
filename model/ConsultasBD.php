@@ -36,4 +36,11 @@
 							where dim_tiempo.anio = 2018 group by dim_tiempo.mes order by Promedio_Ingresos desc";
 
 	$IngresosMes2018 = mysqli_query($Conexion, $Consulta4);
+
+
+	$Consulta5;
+
+
+	
+
 ?>

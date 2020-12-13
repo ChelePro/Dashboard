@@ -49,7 +49,7 @@
                             <div class="sb-sidenav-menu-heading">Opciones</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Query
+                                Datos estadísticos
                             </a>
                             <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
@@ -218,7 +218,8 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            
+                            <div class="text-muted">Sistema de Analisis de Ingresos y Egresos del Salvadore&ntilde;o &copy; 2020</div>
+                               
                         </div>
                     </div>
                 </footer>

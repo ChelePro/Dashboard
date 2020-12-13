@@ -1,5 +1,6 @@
 <?php
-	require ('model/ConsultasBD.php');
+
+    require '../model/ConsultasBD.php';
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +49,7 @@
                             <div class="sb-sidenav-menu-heading">Opciones</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Query
+                                Datos estadísticos
                             </a>
                             <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
@@ -62,17 +63,20 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h2 class="mt-4">Sistema de Analisis de Ingresos y Egresos del Salvadore&ntildeo promedio </h2>
-                    <div class="card mb-4">
-                    </div>
+                        <h3 class="mt-4">Sistema de Análisis de Ingresos y Egresos del Salvadore&ntilde;o</h3>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Datos estadísticos</li>
+                        </ol>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table mr-1"></i>
-                                  Egresos totales por grupo ocupacional durante el 2017
+                                Egresos durante el 2017 
                             </div>
+
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                            <tr>
                                        <td>Grupo ocupacional</td>
                                         <td>Promedio total de gastos</td>
@@ -85,17 +89,17 @@
 
                                     <?php
 
-                                        foreach($Resultado1 as $mostrar)
+                                        foreach($ActLaborales2017 as $mostrar)
                                         {
                                     ?>
                                     <tr>
                                         <td><?php echo $mostrar['GrupoOcupacional']; ?></td>
-                                        <td><?php echo $mostrar['Promedio_Gastos']; ?></td>
-                                        <td><?php echo $mostrar['Gasto_Alimentacion']; ?></td>
-                                        <td><?php echo $mostrar['Gasto_Educacion']; ?></td>
-                                        <td><?php echo $mostrar['Gasto_Salud']; ?></td>
-                                        <td><?php echo $mostrar['Gasto_Vivienda']; ?></td>
-                                        <td><?php echo $mostrar['Gasto_Empleo']; ?></td>
+                                        <td>&#36;<?php echo $mostrar['Promedio_Gastos']; ?></td>
+                                        <td>&#36;<?php echo $mostrar['Gasto_Alimentacion']; ?></td>
+                                        <td>&#36;<?php echo $mostrar['Gasto_Educacion']; ?></td>
+                                        <td>&#36;<?php echo $mostrar['Gasto_Salud']; ?></td>
+                                        <td>&#36;<?php echo $mostrar['Gasto_Vivienda']; ?></td>
+                                        <td>&#36;<?php echo $mostrar['Gasto_Empleo']; ?></td>
                                     </tr>
                                     <?php } ?>
                                     </table>
@@ -123,17 +127,17 @@
 
                                     <?php
 
-                                        foreach($Resultado2 as $mostrar2)
+                                        foreach($ActLaborales2018 as $mostrar2)
                                         {
                                     ?>
                                     <tr>
                                         <td><?php echo $mostrar2['GrupoOcupacional']; ?></td>
-                                        <td><?php echo $mostrar2['Promedio_Gastos']; ?></td>
-                                        <td><?php echo $mostrar2['Gasto_Alimentacion']; ?></td>
-                                        <td><?php echo $mostrar2['Gasto_Educacion']; ?></td>
-                                        <td><?php echo $mostrar2['Gasto_Salud']; ?></td>
-                                        <td><?php echo $mostrar2['Gasto_Vivienda']; ?></td>
-                                        <td><?php echo $mostrar2['Gasto_Empleo']; ?></td>
+                                        <td>&#36;<?php echo $mostrar2['Promedio_Gastos']; ?></td>
+                                        <td>&#36;<?php echo $mostrar2['Gasto_Alimentacion']; ?></td>
+                                        <td>&#36;<?php echo $mostrar2['Gasto_Educacion']; ?></td>
+                                        <td>&#36;<?php echo $mostrar2['Gasto_Salud']; ?></td>
+                                        <td>&#36;<?php echo $mostrar2['Gasto_Vivienda']; ?></td>
+                                        <td>&#36;<?php echo $mostrar2['Gasto_Empleo']; ?></td>
                                     </tr>
                                     <?php } ?>
                                     </table>
@@ -159,15 +163,15 @@
 
                                     <?php
 
-                                        foreach($Resultado3 as $mostrar)
+                                        foreach($IngresosMes2017 as $mostrar3)
                                         {
                                     ?>
                                     <tr>
-                                        <td><?php echo $mostrar['mesl']; ?></td>
-                                        <td><?php echo $mostrar['IngresoEmpleoDep']; ?></td>
-                                        <td><?php echo $mostrar['IngresoEmpleoIndep']; ?></td>
-                                        <td><?php echo $mostrar['Totales']; ?></td>
-                                        <td><?php echo $mostrar['Promedio_Ingresos']; ?></td>
+                                        <td><?php echo $mostrar3['mes']; ?></td>
+                                        <td>&#36;<?php echo $mostrar3['IngresoEmpleoDep']; ?></td>
+                                        <td>&#36;<?php echo $mostrar3['IngresoEmpleoIndep']; ?></td>
+                                        <td>&#36;<?php echo $mostrar3['Totales']; ?></td>
+                                        <td>&#36;<?php echo $mostrar3['Promedio_Ingresos']; ?></td>
                                     </tr>
                                     <?php } ?>
                                     </table>
@@ -185,24 +189,24 @@
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <tr>
-                                       	<td>Mes</td>
-                                       	<td>Ingreso empleo dependiente</td>
-                                       	<td>Ingreso empleo independiente</td>
+                                        <td>Mes</td>
+                                        <td>Ingreso empleo dependiente</td>
+                                        <td>Ingreso empleo independiente</td>
                                         <td>Totales</td>
                                         <td>Promedio de ingresos</td>
                                     </tr>
 
                                     <?php
 
-                                        foreach($Resultado4 as $mostrar)
+                                        foreach($IngresosMes2018 as $mostrar4)
                                         {
                                     ?>
                                     <tr>
-										<td><?php echo $mostrar['mesl']; ?></td>
-                                        <td><?php echo $mostrar['IngresoEmpleoDep']; ?></td>
-                                        <td><?php echo $mostrar['IngresoEmpleoIndep']; ?></td>
-                                        <td><?php echo $mostrar['Totales']; ?></td>
-                                        <td><?php echo $mostrar['Promedio_Ingresos']; ?></td>
+                                        <td><?php echo $mostrar4['mes']; ?></td>
+                                        <td>&#36;<?php echo $mostrar4['IngresoEmpleoDep']; ?></td>
+                                        <td>&#36;<?php echo $mostrar4['IngresoEmpleoIndep']; ?></td>
+                                        <td>&#36;<?php echo $mostrar4['Totales']; ?></td>
+                                        <td>&#36;<?php echo $mostrar4['Promedio_Ingresos']; ?></td>
                                     </tr>
                                     <?php } ?>
                                     </table>
@@ -214,7 +218,8 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            
+                            <div class="text-muted">Sistema de Analisis de Ingresos y Egresos del Salvadore&ntilde;o &copy; 2020</div>
+                               
                         </div>
                     </div>
                 </footer>
@@ -226,5 +231,6 @@
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/datatables-demo.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     </body>
 </html>

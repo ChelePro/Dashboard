@@ -6,6 +6,5 @@
 	$BD = "datos_ehpm";
 	$Conexion;
 
-	$conexion = mysqli_connect($servidor, $usuario, $contrasena, $basedatos);
-
+	$Conexion = mysqli_connect($Servidor, $Usuario, $Contrasena, $Basedatos);
 ?> 

@@ -1,3 +1,7 @@
+<?php
+    require '../model/ConsultasBD.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -31,7 +35,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Princiapal</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
@@ -65,62 +69,119 @@
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Promedio de egresos 2017</div>
+                                    <div class="card-body">Promedio de egresos 2018</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <h3> &#36;
                                         <?php  
-                                        require '../model/ConsultasBD.php';
-                                        foreach($Gastos2k17 as $mostrar)
+                                        foreach($Gastos2k18 as $Gastos18)
                                         {  
-                                            echo $mostrar['Gastos2017'];
-                                        } ?>
+                                            echo $Gastos18['Gastos2018'];
+                                        } ?> 
+                                    </h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
+                                    <div class="card-body">Promedio de egresos 2017</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    <h3> &#36;
+                                        <?php  
+                                        foreach($Gastos2k17 as $Gastos17)
+                                        {  
+                                            echo $Gastos17['Gastos2017'];
+                                        } ?> 
+                                    </h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
+                                    <div class="card-body">Promedio de ingresos 2018</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    <h3> &#36;
+                                        <?php  
+                                        foreach($IngresosProm2k18 as $Ingresos2)
+                                        {  
+                                            echo $Ingresos2['TotalIngresos'];
+                                        } ?> 
+                                    </h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
+                                    <div class="card-body">Promedio de ingresos 2017</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    <h3> &#36;
+                                        <?php  
+                                        foreach($IngresosProm2k17 as $Ingresos)
+                                        {  
+                                            echo $Ingresos['TotalIngresos'];
+                                        } ?> 
+                                    </h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
+                                    <div class="card-body">Total de remesas 2017</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    <h3> &#36;
+                                        <?php  
+                                        foreach($Remesas2017 as $Remesas1)
+                                        {  
+                                            echo $Remesas1['Remesas1'];
+                                        } ?> 
+                                    </h3>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Total de remesas 2018</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <h3> &#36;
+                                        <?php  
+                                        foreach($Remesas2018 as $Remesas2)
+                                        {  
+                                            echo $Remesas2['Remesas2'];
+                                        } ?> 
+                                    </h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Ingresos totales del sector privado</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <h3> &#36;
+                                        <?php  
+                                        foreach($IngresoPriv as $Privado)
+                                        {  
+                                            echo $Privado['IngresosPv'];
+                                        } ?> 
+                                    </h3>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
+                                    <div class="card-body">Ingresos Totales del sector publico</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    <h3> &#36; 
+                                        <?php  
+                                        foreach($IngresoPub as $Publico)
+                                        {  
+                                            echo $Publico['IngresosPb'];
+                                        } ?> 
+                                    </h3>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                         <div class="row">
                             <div class="col-xl-6">

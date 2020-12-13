@@ -36,7 +36,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Principal</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
@@ -138,6 +138,44 @@
                                         <td>&#36;<?php echo $mostrar2['Gasto_Salud']; ?></td>
                                         <td>&#36;<?php echo $mostrar2['Gasto_Vivienda']; ?></td>
                                         <td>&#36;<?php echo $mostrar2['Gasto_Empleo']; ?></td>
+                                    </tr>
+                                    <?php } ?>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                    Comprativa general entre egresos del 2017 y 2018
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <tr>
+                                       <td>A&ntilde;o</td>
+                                        <td>Promedio total de gastos</td>
+                                         <td>Gasto en alimentacion</td>
+                                          <td>Gasto en educacion</td>
+                                           <td>Gasto en salud</td>
+                                           <td>Gasto en empleo</td>
+                                           <td>Gasto en vivienda</td>
+                                    </tr>
+                                    <?php
+
+                                        foreach($Comparativa as $mostrar5)
+                                        {
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $mostrar5['anio']; ?></td>
+                                        <td>&#36;<?php echo $mostrar5['Promedio_Gastos']; ?></td>
+                                        <td>&#36;<?php echo $mostrar5['Gasto_Alimentacion']; ?></td>
+                                        <td>&#36;<?php echo $mostrar5['Gasto_Educacion']; ?></td>
+                                        <td>&#36;<?php echo $mostrar5['Gasto_Salud']; ?></td>
+                                        <td>&#36;<?php echo $mostrar5['Gasto_Vivienda']; ?></td>
+                                        <td>&#36;<?php echo $mostrar5['Gasto_Empleo']; ?></td>
                                     </tr>
                                     <?php } ?>
                                     </table>

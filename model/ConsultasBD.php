@@ -9,7 +9,7 @@
 		                    inner join dim_tiempo on dim_tiempo.dim_tiempo_id = fact_monetario.dim_tiempo_id
 			                    where dim_tiempo.anio = 2017 group by dim_empleo.GrupoOcupacional order by Promedio_Gastos desc";
 
-	$ActLaborales2017 = mysqli_query($conexion, $Consulta1);
+	$ActLaborales2017 = mysqli_query($Conexion, $Consulta1);
 
 
     $Consulta2 = "select GrupoOcupacional, round(avg(GastoTotalHogar), 2) as Promedio_Gastos, round(avg(GastoHogarAlimen), 2) as Gasto_Alimentacion, 
@@ -19,6 +19,6 @@
 		                    inner join dim_tiempo on dim_tiempo.dim_tiempo_id = fact_monetario.dim_tiempo_id
 			                    where dim_tiempo.anio = 2018 group by dim_empleo.GrupoOcupacional order by Promedio_Gastos desc"
 
-     $ActLaborales2018 = mysqli_query($conexion, $Consulta2);       
+     $ActLaborales2018 = mysqli_query($Conexion, $Consulta2);       
 
 ?>

@@ -21,7 +21,7 @@
 
      $ActLaborales2018 = mysqli_query($Conexion, $Consulta2);     
 
-	 $Consulta3 = "select mes, round(sum(IngresoEmpleoDep), 2) as IngresoEmpleoDep, round(sum(IngresoEmpleoIndep),2) as IngresoEmpeloIndep,
+	 $Consulta3 = "select mes, round(sum(IngresoEmpleoDep), 2) as IngresoEmpleoDep, round(sum(IngresoEmpleoIndep),2) as IngresoEmpleoIndep,
 					round(sum(IngresoEmpleoDep + IngresoEmpleoIndep), 2) as Totales, round(avg(IngresoTotalHogar), 2) as Promedio_Ingresos
 						from fact_monetario
     						inner join dim_tiempo on dim_tiempo.dim_tiempo_id = fact_monetario.dim_tiempo_id
@@ -29,7 +29,7 @@
 
 	$IngresosMes2017 = mysqli_query($Conexion, $Consulta3);
 
-	$Consulta4 = "select mes, round(sum(IngresoEmpleoDep), 2) as IngresoEmpleoDep, round(sum(IngresoEmpleoIndep),2) as IngresoEmpeloIndep,
+	$Consulta4 = "select mes, round(sum(IngresoEmpleoDep), 2) as IngresoEmpleoDep, round(sum(IngresoEmpleoIndep),2) as IngresoEmpleoIndep,
 					round(sum(IngresoEmpleoDep + IngresoEmpleoIndep), 2) as Totales, round(avg(IngresoTotalHogar), 2) as Promedio_Ingresos
 						from fact_monetario
  						inner join dim_tiempo on dim_tiempo.dim_tiempo_id = fact_monetario.dim_tiempo_id

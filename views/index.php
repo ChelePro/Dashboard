@@ -96,7 +96,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
+                                <div class="card bg-danger text-white mb-4">
                                     <div class="card-body">Promedio de ingresos 2018</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <h3> &#36;
@@ -124,7 +124,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
+                                <div class="card bg-danger text-white mb-4">
                                     <div class="card-body">Total de remesas 2017</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <h3> &#36;
@@ -168,7 +168,7 @@
                             </div>
 
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
+                                <div class="card bg-warning text-white mb-4">
                                     <div class="card-body">Ingresos Totales del sector publico</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <h3> &#36; 
@@ -203,7 +203,39 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <!-- EXPENSES -->
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fa fa-chart-line mr-1"></i>
+                                        Egresos anuales 2017 y 2018
+                                    </div>
+                                    <div class="card-body"><canvas id="graphExpenses" width="100%" height="30"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-pie mr-1"></i>
+                                        Egresos por empleo 2017
+                                    </div>
+                                    <div class="card-body"><canvas id="graphExpenses2017" width="100%" height="50"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-pie mr-1"></i>
+                                        Egresos por empleo 2018
+                                    </div>
+                                    <div class="card-body"><canvas id="graphExpenses2018" width="100%" height="50"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -222,6 +254,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/chart-area-demo.js"></script>
         <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="assets/demo/chart-line-expenses.js"></script>
+        <script src="assets/demo/chart-donut-2017.js"></script>
+        <script src="assets/demo/chart-donut-2018.js"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/datatables-demo.js"></script>

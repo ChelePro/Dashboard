@@ -62,6 +62,7 @@ var myLineChart = new Chart(ctx, {
         }
       }],
     },
+    //modificacion en el legend
     legend: {
       display: true,
       position: 'bottom'

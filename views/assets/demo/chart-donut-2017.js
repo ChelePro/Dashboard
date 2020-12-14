@@ -62,7 +62,11 @@ var myLineChart = new Chart(ctx, {
 },
 options: {
     legend: {
-      display: true
+      display: true,
+      position: 'right'
+    },
+    tooltips: {
+      enabled: true
     }
   }
 });

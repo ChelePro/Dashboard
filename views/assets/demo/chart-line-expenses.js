@@ -63,7 +63,8 @@ var myLineChart = new Chart(ctx, {
       }],
     },
     legend: {
-      display: true
+      display: true,
+      position: 'bottom'
     }
   }
 });

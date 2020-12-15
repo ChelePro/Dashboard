@@ -69,7 +69,7 @@
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Promedio de egresos 2018</div>
+                                    <div class="card-body"><a href="charts.php" class="text-white">Promedio de egresos 2018</a></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <h3> &#36;
                                         <?php  
@@ -78,12 +78,13 @@
                                             echo $Gastos18['Gastos2018'];
                                         } ?> 
                                     </h3>
+                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Promedio de egresos 2017</div>
+                                    <div class="card-body"><a href="charts.php" class="text-white">Promedio de egresos 2017</a></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <h3> &#36;
                                         <?php  
@@ -97,7 +98,7 @@
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Promedio de ingresos 2018</div>
+                                    <div class="card-body"><a href="charts.php" class="text-white">Promedio de ingresos 2018</a></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <h3> &#36;
                                         <?php  
@@ -111,7 +112,7 @@
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Promedio de ingresos 2017</div>
+                                    <div class="card-body"><a href="charts.php" class="text-white">Promedio de ingresos 2017</a></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <h3> &#36;
                                         <?php  
@@ -125,7 +126,7 @@
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Total de remesas 2017</div>
+                                    <div class="card-body"><a href="charts.php" class="text-white">Total de remesas 2017</a></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <h3> &#36;
                                         <?php  
@@ -139,7 +140,7 @@
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Total de remesas 2018</div>
+                                    <div class="card-body"><a href="charts.php" class="text-white">Total de remesas 2018</a></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <h3> &#36;
                                         <?php  
@@ -154,7 +155,7 @@
 
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Ingresos totales del sector privado</div>
+                                    <div class="card-body"><a href="charts.php" class="text-white">Ingresos totales del sector privado</a></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <h3> &#36;
                                         <?php  
@@ -169,7 +170,7 @@
 
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Ingresos Totales del sector publico</div>
+                                    <div class="card-body"><a href="charts.php" class="text-white">Ingresos Totales del sector publico</a></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <h3> &#36; 
                                         <?php  
